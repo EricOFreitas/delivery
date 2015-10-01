@@ -1,0 +1,27 @@
+<?php
+
+namespace Delivery\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
+
+class Client extends Model implements Transformable
+{
+    use TransformableTrait;
+    //permite criar no metodo construtor apenas passando o name
+    protected $fillable = [
+		'user_id',
+        'phone',
+        'address',
+        'city',
+        'state',
+        'zipcode'
+	];
+	
+	public function user()
+	{
+		return $this->hasOne(User::class);
+	}
+
+}
