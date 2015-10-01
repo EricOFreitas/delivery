@@ -4,7 +4,6 @@ namespace Delivery\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Delivery\Repositories\ClientRepository;
 use Delivery\Models\Client;
 
 /**
@@ -13,6 +12,7 @@ use Delivery\Models\Client;
  */
 class ClientRepositoryEloquent extends BaseRepository implements ClientRepository
 {
+
     /**
      * Specify Model class name
      *
